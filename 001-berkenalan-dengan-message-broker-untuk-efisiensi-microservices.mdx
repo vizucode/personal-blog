@@ -25,7 +25,7 @@ Dengan message broker, pesan dapat dikirimkan ke antrian atau topik tertentu dan
 
 Message broker adalah suatu layanan yang secara umum digunukan untuk melakukan pertukaran informasi antar service, Ibaratnya kamu (service pengirim) mengirim sebuah paket ke ekspedisi jasa kirim (message broker) dan kemudian ekspedisi mengirim paketmu ke penerima (service penerima) dan ekspedisi itu memberikanmu garansi jika paket rusak atau hilang, itu merupakan analogi sederhana sebuah message broker, berikut diagram lebih jelasnya!
 
-![Analogi Message Broker]('https://ucarecdn.com/e16abbd3-6ea4-4e10-bb70-8f31b6f8855d/')
+![Analogi Message Broker](https://ucarecdn.com/e16abbd3-6ea4-4e10-bb70-8f31b6f8855d/)
 
 ### AMQP (Advanced Message Queuing Protocol)
 Di dalam komunikasi menggunakan message broker protocol yang digunakan adalah AMQP (Advanced Message Queuing Protocol), protocol inilah yang digunakan standarisasi oleh beberapa layanan message broker terkenal seperti RabbitMQ, Kafka, Solace dll.
@@ -44,7 +44,7 @@ Terdapat beberapa istilah dalam komunikasi menggunakan amqp:
 
 Berikut adalah diagram dari rangkaian diatas:
 
-![Diagram Microservice Memakai Message Broker Sederhana]('https://ucarecdn.com/1f6a261b-c08e-4525-992f-e72cadc1a4af/')
+![Diagram Microservice Memakai Message Broker Sederhana](https://ucarecdn.com/1f6a261b-c08e-4525-992f-e72cadc1a4af/)
 
 ## Mengapa Harus Pakai Message Broker?
 
@@ -61,7 +61,7 @@ Kekurangan dari penggunaan message broker, arsitektur microservice kita sangat k
 ## Hands-On Penggunaan Message Broker!
 Sekarang kita akan membuat sebuah layanan microservice sangat sederhana menggunakan message broker sebagai jalur lalu lintasnya!, kita akan membuat sebuah microservice seperti yang ditujukkan diagram berikut:
 
-![Diagram Microservice Memakai Message Broker Sederhana]('https://ucarecdn.com/1f6a261b-c08e-4525-992f-e72cadc1a4af/')
+![Diagram Microservice Memakai Message Broker Sederhana](https://ucarecdn.com/1f6a261b-c08e-4525-992f-e72cadc1a4af/)
 
 #### Prerequisite
 - Docker version 24.0.2 and Up
@@ -125,7 +125,7 @@ docker compose up -d
 
 Untuk mengujinya, Kemudian kita bisa akses ke `http://localhost:15672` kemudian pastikan muncul halaman message broker management ini
 
-![Halaman Login RabbitMQ Management]('https://ucarecdn.com/b6b32a9e-f747-4ac6-a0ae-f794a176297c/')
+![Halaman Login RabbitMQ Management](https://ucarecdn.com/b6b32a9e-f747-4ac6-a0ae-f794a176297c/)
 
 Setelah itu login menggunakan credential berikut, yang sudah di setup di docker-compose bagian environtment
 ```
@@ -135,7 +135,7 @@ password: secrettesting
 
 Dan pastikan sukses masuk ke halaman management RabbitMQ seperti ini:
 
-![Halaman RabbitMQ Management Rabbit MQ]('https://ucarecdn.com/fcb06836-8495-49b3-b6fb-c6c0b4aab322/')
+![Halaman RabbitMQ Management Rabbit MQ](https://ucarecdn.com/fcb06836-8495-49b3-b6fb-c6c0b4aab322/)
 
 #### 4. Setup RabbitMQ
 Setelah RabbitMQ berlajan, kita akan melakukan beberapa langkah untuk menambahkan Exchange, Binding Dan Juga Queues
@@ -143,7 +143,7 @@ Setelah RabbitMQ berlajan, kita akan melakukan beberapa langkah untuk menambahka
 ##### Menambahkan Exchange
 Untuk menambahkan Exchange masuk ke Tab `Exchanges` dan klik `Add a new exchange`, seperti dibawah ini:
 
-![Add New Exchange]('https://ucarecdn.com/39921542-941a-4cd3-b79e-20d999510f0b/')
+![Add New Exchange](https://ucarecdn.com/39921542-941a-4cd3-b79e-20d999510f0b/)
 
 Isikan form berikut:
 - **Name**: Berguna untuk menambahkan nama exchange yang akan di buat, isikan dengan `event` atau bebas
@@ -164,11 +164,11 @@ Kemudian tambah queue dengan cara `add queue`
 ##### Membuat Binding
 Ketika queue selesai dibuat pastikan queue bisa dilihat di tabel seperti berikut:
 
-![Table Queues]('https://ucarecdn.com/c960d65b-8b64-4ae2-bce0-6251df9b5245/')
+![Table Queues](https://ucarecdn.com/c960d65b-8b64-4ae2-bce0-6251df9b5245/)
 
 Nah, setelah queue muncul kamu buat sebuah binding dengan cara klik nama queue tersebut dan halaman akan diarahkan seperti ini:
 
-![Halaman Binding Exchange]('https://ucarecdn.com/1bd7d724-f463-42f0-bacd-d3ddb521537c/')
+![Halaman Binding Exchange](https://ucarecdn.com/1bd7d724-f463-42f0-bacd-d3ddb521537c/)
 
 Buka dropdown `Bindings`, dan isikan Form Berikut
 - **From Exchange**: Isikan dengan nama exchange yang sudah dibuat
@@ -474,11 +474,11 @@ Setelah kita membuat beberapa service diatas, kita jalankan secara pararel servi
 
 Pastikan jalan semua seperti contoh dibawah:
 ##### Terminal 1
-![service payment-svc]('https://ucarecdn.com/b71afdcb-fa67-4b35-ac60-d6b10d4ff995/')
+![service payment-svc](https://ucarecdn.com/b71afdcb-fa67-4b35-ac60-d6b10d4ff995/)
 ##### Terminal 2
-![service notify-svc]('https://ucarecdn.com/6314b4fa-8861-4fc7-9d8d-06db99a81e99/')
+![service notify-svc](https://ucarecdn.com/6314b4fa-8861-4fc7-9d8d-06db99a81e99/)
 ##### Terminal 3
-![service shipping-svc]('https://ucarecdn.com/1500c5ec-28ce-4305-82a1-e0c31d2f7872/')
+![service shipping-svc](https://ucarecdn.com/1500c5ec-28ce-4305-82a1-e0c31d2f7872/)
 
 #### 8. Uji Coba
 Langkah terakhir kita lakuin uji coba, jadi ekspektasi kita ketika publisher `payment-svc` mengirim suatu pesan maka consumer `notify-svc` dan `shipping-svc`
@@ -499,9 +499,9 @@ dengan body request seperti:
 Pastikan response dari service `notify-svc` dan `shipping-svc` seperti ini:
 
 ##### Terminal 2
-![service notify-svc]('https://ucarecdn.com/6314b4fa-8861-4fc7-9d8d-06db99a81e99/')
+![service notify-svc](https://ucarecdn.com/6314b4fa-8861-4fc7-9d8d-06db99a81e99/)
 ##### Terminal 3
-![service shipping-svc]('https://ucarecdn.com/1500c5ec-28ce-4305-82a1-e0c31d2f7872/')
+![service shipping-svc](https://ucarecdn.com/1500c5ec-28ce-4305-82a1-e0c31d2f7872/)
 
 Jika, sudah mendapatkan response seperti diatas tandanya sudah sukses menjalankan message broker di microservices.
 
